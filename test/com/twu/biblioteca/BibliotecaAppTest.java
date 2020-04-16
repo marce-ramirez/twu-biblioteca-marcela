@@ -13,13 +13,13 @@ import static org.junit.Assert.assertNotNull;
 public class BibliotecaAppTest {
 
     private final String welcomeMessage = "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n";
-    public static final String booksList = "\nHis Dark Materials - Philip Pullman" +
-            "\nGood Omens - Neil Gaiman and Terry Pratchett" +
-            "\nThe Hobbit - J.R.R. Tolkien" +
-            "\nNeverwhere - Neil Gaiman" +
-            "\nEarthsea Cycle - Ursula K. Le Guin" +
-            "\nThe Name of the Wind - Patrick Rothfuss" +
-            "\nHarry Potter - J.K. Rowling";
+    public static final String booksList = "\nHis Dark Materials - Philip Pullman - 1995" +
+            "\nGood Omens - Neil Gaiman and Terry Pratchett - 1990" +
+            "\nThe Hobbit - J.R.R. Tolkien - 1937" +
+            "\nNeverwhere - Neil Gaiman - 1996" +
+            "\nEarthsea Cycle - Ursula K. Le Guin - 1968" +
+            "\nThe Name of the Wind - Patrick Rothfuss - 2007" +
+            "\nHarry Potter - J.K. Rowling - 1997";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
