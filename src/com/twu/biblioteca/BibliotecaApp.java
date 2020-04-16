@@ -6,7 +6,8 @@ public class BibliotecaApp {
         displayWelcomeMessage();
     }
 
-    static void displayWelcomeMessage () {
+    public static void displayWelcomeMessage () {
         System.out.print("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n");
     }
+
 }
