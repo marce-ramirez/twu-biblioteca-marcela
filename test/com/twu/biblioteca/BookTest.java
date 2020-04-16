@@ -10,16 +10,12 @@ public class BookTest {
 
     @Before
     public void setUpBook () {
-        testBook = new Book("The Golden Compass", "Phillip Pullman");
+        testBook = new Book("The Golden Compass", "Philip Pullman");
     }
 
     @Test
-    public void testBookTitle () {
+    public void testBookInformation () {
         assertEquals("The Golden Compass", testBook.getTitle());
-    }
-
-    @Test
-    public void testBookAuthor () {
-        assertEquals("Phillip Pullman", testBook.getAuthor());
+        assertEquals("Philip Pullman", testBook.getAuthor());
     }
 }
