@@ -12,7 +12,7 @@ import static org.junit.Assert.assertNotNull;
 
 public class BibliotecaAppTest {
 
-    private final String welcomeMessage = "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n";
+    private final String welcomeMessage = "\nWelcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n\n";
     public static final String booksList = "\nHis Dark Materials - Philip Pullman - 1995" +
             "\nGood Omens - Neil Gaiman and Terry Pratchett - 1990" +
             "\nThe Hobbit - J.R.R. Tolkien - 1937" +
