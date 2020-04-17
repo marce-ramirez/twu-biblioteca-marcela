@@ -3,6 +3,7 @@ package com.twu.biblioteca;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -20,10 +21,11 @@ public class BibliotecaAppTest {
             "\nEarthsea Cycle - Ursula K. Le Guin - 1968" +
             "\nThe Name of the Wind - Patrick Rothfuss - 2007" +
             "\nHarry Potter - J.K. Rowling - 1997";
+    private static final String invalidOptionMessage = "\nPlease select a valid option\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final String invalidOption = "Test";
 
-//    private final PrintStream originalOut = System.out;
     private BibliotecaApp biblioteca;
 
     @Before
@@ -42,5 +44,11 @@ public class BibliotecaAppTest {
     public void printListOfBooksWhenAppStarts() {
         biblioteca.displayBooksList();
         assertEquals(booksList, outContent.toString());
+    }
+
+    @Test
+    public void showMessageWhenInputIsInvalid() {
+        biblioteca.processUserInput(invalidOption);
+        assertEquals(invalidOptionMessage, outContent.toString());
     }
 }

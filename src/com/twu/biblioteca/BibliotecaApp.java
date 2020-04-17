@@ -1,30 +1,31 @@
 package com.twu.biblioteca;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class BibliotecaApp {
     private static ArrayList<Book> allBooks = new ArrayList<Book>();
     private static Menu menu = new Menu();
-    private static String userInput;
 
     public static void main(String[] args) {
         displayWelcomeMessage();
         menu.generateAppMenu();
-        processUserInput();
+
+        String userInput = menu.getUserInput();
+
+        processUserInput(userInput);
     }
 
     public static void displayWelcomeMessage () {
         System.out.print("\nWelcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n\n");
     }
 
-    public static void processUserInput() {
-        userInput = menu.getUserInput();
+    public static void processUserInput(String userInput) {
         switch (userInput) {
             case "1":
                 displayBooksList();
                 break;
             default:
+                System.out.print("\nPlease select a valid option\n");
                 break;
        }
     }
