@@ -41,11 +41,11 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void printListOfBooksWhenAppStarts() {
-        biblioteca.displayBooksList();
+    public void displayBookListWhenUserEntersOne() {
+        biblioteca.processUserInput("1");
         assertEquals(booksList, outContent.toString());
     }
-
+    
     @Test
     public void showMessageWhenInputIsInvalid() {
         biblioteca.processUserInput(invalidOption);

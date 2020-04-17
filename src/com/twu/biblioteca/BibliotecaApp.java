@@ -9,9 +9,7 @@ public class BibliotecaApp {
     public static void main(String[] args) {
         displayWelcomeMessage();
         menu.generateAppMenu();
-
         String userInput = menu.getUserInput();
-
         processUserInput(userInput);
     }
 
