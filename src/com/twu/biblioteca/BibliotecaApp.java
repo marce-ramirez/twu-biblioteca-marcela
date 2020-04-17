@@ -5,13 +5,24 @@ import java.util.ArrayList;
 public class BibliotecaApp {
     private static Menu menu = new Menu();
     private static String bookList;
-    
+    private static boolean appIsRunning = true;
+
     public static void main(String[] args) {
         displayWelcomeMessage();
         createBookList();
         menu.generateAppMenu();
-        String userInput = menu.getUserInput();
-        processUserInput(userInput);
+        while(isAppRunning()) {
+            String userInput = menu.getUserInput();
+            processUserInput(userInput);
+        }
+    }
+
+    public static boolean isAppRunning() {
+        return appIsRunning;
+    }
+
+    public static void setAppNotRunning() {
+        appIsRunning = false;
     }
 
     public static void displayWelcomeMessage () {
@@ -22,6 +33,10 @@ public class BibliotecaApp {
         switch (userInput) {
             case "1":
                 System.out.print(bookList);
+                break;
+            case "2":
+                System.out.print("\nGood bye!\n");
+                setAppNotRunning();
                 break;
             default:
                 System.out.print("\nPlease select a valid option\n\n");

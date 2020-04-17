@@ -41,6 +41,12 @@ public class BibliotecaAppTest {
     }
 
     @Test
+    public void closeAppWhenUserEntersQuit() {
+        BibliotecaApp.processUserInput("2");
+        assertEquals(false, BibliotecaApp.isAppRunning());
+    }
+
+    @Test
     public void showMessageWhenInputIsInvalid() {
         String invalidOption = "Test";
         BibliotecaApp.processUserInput(invalidOption);
