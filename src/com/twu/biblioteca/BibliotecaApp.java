@@ -5,16 +5,13 @@ import java.util.ArrayList;
 public class BibliotecaApp {
     private static Menu menu = new Menu();
     private static String bookList;
-    private static boolean appIsRunning = true;
-
+    
     public static void main(String[] args) {
         displayWelcomeMessage();
         createBookList();
         menu.generateAppMenu();
-        while(appIsRunning) {
-            String userInput = menu.getUserInput();
-            processUserInput(userInput);
-        }
+        String userInput = menu.getUserInput();
+        processUserInput(userInput);
     }
 
     public static void displayWelcomeMessage () {
@@ -33,7 +30,7 @@ public class BibliotecaApp {
     }
 
     public static void createBookList() {
-        ArrayList<Book> allBooks = new ArrayList<Book>();
+        ArrayList<Book> allBooks = new ArrayList<>();
 
         allBooks.add(new Book("His Dark Materials", "Philip Pullman", 1995));
         allBooks.add(new Book("Good Omens", "Neil Gaiman and Terry Pratchett", 1990));
@@ -43,13 +40,19 @@ public class BibliotecaApp {
         allBooks.add(new Book("The Name of the Wind", "Patrick Rothfuss", 2007));
         allBooks.add(new Book("Harry Potter", "J.K. Rowling", 1997));
 
-        String bookListString = "";
+        StringBuilder bookListString = new StringBuilder();
         for (Book book : allBooks) {
-            bookListString += "\n" + book.getTitle() + " - " + book.getAuthor() + " - " + book.getPublicationYear();
+            bookListString
+                    .append("\n")
+                    .append(book.getTitle())
+                    .append(" - ")
+                    .append(book.getAuthor())
+                    .append(" - ")
+                    .append(book.getPublicationYear());
         }
-        bookListString += "\n\n";
+        bookListString.append("\n\n");
 
-        bookList = bookListString;
+        bookList = bookListString.toString();
     }
 
 }
