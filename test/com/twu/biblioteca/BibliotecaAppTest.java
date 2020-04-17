@@ -20,8 +20,8 @@ public class BibliotecaAppTest {
             "\nNeverwhere - Neil Gaiman - 1996" +
             "\nEarthsea Cycle - Ursula K. Le Guin - 1968" +
             "\nThe Name of the Wind - Patrick Rothfuss - 2007" +
-            "\nHarry Potter - J.K. Rowling - 1997";
-    private static final String invalidOptionMessage = "\nPlease select a valid option\n";
+            "\nHarry Potter - J.K. Rowling - 1997\n\n";
+    private static final String invalidOptionMessage = "\nPlease select a valid option\n\n";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final String invalidOption = "Test";
@@ -42,10 +42,11 @@ public class BibliotecaAppTest {
 
     @Test
     public void displayBookListWhenUserEntersOne() {
+        biblioteca.createBookList();
         biblioteca.processUserInput("1");
         assertEquals(booksList, outContent.toString());
     }
-    
+
     @Test
     public void showMessageWhenInputIsInvalid() {
         biblioteca.processUserInput(invalidOption);

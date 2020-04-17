@@ -3,14 +3,18 @@ package com.twu.biblioteca;
 import java.util.ArrayList;
 
 public class BibliotecaApp {
-    private static ArrayList<Book> allBooks = new ArrayList<Book>();
     private static Menu menu = new Menu();
+    private static String bookList;
+    private static boolean appIsRunning = true;
 
     public static void main(String[] args) {
         displayWelcomeMessage();
+        createBookList();
         menu.generateAppMenu();
-        String userInput = menu.getUserInput();
-        processUserInput(userInput);
+        while(appIsRunning) {
+            String userInput = menu.getUserInput();
+            processUserInput(userInput);
+        }
     }
 
     public static void displayWelcomeMessage () {
@@ -20,15 +24,17 @@ public class BibliotecaApp {
     public static void processUserInput(String userInput) {
         switch (userInput) {
             case "1":
-                displayBooksList();
+                System.out.print(bookList);
                 break;
             default:
-                System.out.print("\nPlease select a valid option\n");
+                System.out.print("\nPlease select a valid option\n\n");
                 break;
        }
     }
 
     public static void createBookList() {
+        ArrayList<Book> allBooks = new ArrayList<Book>();
+
         allBooks.add(new Book("His Dark Materials", "Philip Pullman", 1995));
         allBooks.add(new Book("Good Omens", "Neil Gaiman and Terry Pratchett", 1990));
         allBooks.add(new Book("The Hobbit", "J.R.R. Tolkien", 1937));
@@ -36,14 +42,14 @@ public class BibliotecaApp {
         allBooks.add(new Book("Earthsea Cycle", "Ursula K. Le Guin", 1968));
         allBooks.add(new Book("The Name of the Wind", "Patrick Rothfuss", 2007));
         allBooks.add(new Book("Harry Potter", "J.K. Rowling", 1997));
+
+        String bookListString = "";
+        for (Book book : allBooks) {
+            bookListString += "\n" + book.getTitle() + " - " + book.getAuthor() + " - " + book.getPublicationYear();
+        }
+        bookListString += "\n\n";
+
+        bookList = bookListString;
     }
 
-    public static void displayBooksList() {
-        createBookList();
-        String allBooksString = "";
-        for (Book book : allBooks) {
-            allBooksString += "\n" + book.getTitle() + " - " + book.getAuthor() + " - " + book.getPublicationYear();
-        }
-        System.out.print(allBooksString);
-    }
 }
