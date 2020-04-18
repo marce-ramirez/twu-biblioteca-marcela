@@ -9,6 +9,7 @@ public class BibliotecaApp {
     private static Menu menu = new Menu();
     public static ArrayList<Book> allBooks = new ArrayList<>();
     private static boolean appIsRunning = true;
+    private static String outputMessage = "";
 
     public static void main(String[] args) {
         displayWelcomeMessage();
@@ -24,6 +25,14 @@ public class BibliotecaApp {
         }
     }
 
+    public static String getOutputMessage() {
+        return outputMessage;
+    }
+
+    public static void setOutputMessage (String message) {
+        outputMessage = message;
+    }
+
     public static boolean isAppRunning() {
         return appIsRunning;
     }
@@ -33,7 +42,8 @@ public class BibliotecaApp {
     }
 
     public static void displayWelcomeMessage () {
-        System.out.print("\nWelcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n");
+        setOutputMessage("\nWelcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n");
+        System.out.print(outputMessage);
     }
 
     public static void processUserInput(String userInput) {
@@ -105,7 +115,8 @@ public class BibliotecaApp {
         Book foundBook = findBookById(bookId);
         if (foundBook != null) {
             foundBook.setBookNotAvailable();
-            System.out.print("\nThank you! Enjoy the book\n");
+            setOutputMessage("\nThank you! Enjoy the book\n");
+            System.out.print(outputMessage);
         }
     }
 

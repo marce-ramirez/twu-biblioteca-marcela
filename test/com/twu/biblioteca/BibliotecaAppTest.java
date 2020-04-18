@@ -49,9 +49,11 @@ public class BibliotecaAppTest {
         assert bookToTest != null;
         assertTrue(bookToTest.isBookAvailable());
         System.setIn(new ByteArrayInputStream(testBookId.getBytes()));
+        outContent.reset();
         BibliotecaApp.processUserInput("2");
         BibliotecaApp.checkoutBook();
         assertFalse(bookToTest.isBookAvailable());
+        assertEquals("\nThank you! Enjoy the book\n", BibliotecaApp.getOutputMessage());
     }
 
     @Test
