@@ -17,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -30,6 +30,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -114,7 +118,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BibliotecaAppTest.displayInitialWelcomeMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -123,14 +127,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="displayInitialWelcomeMessage" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BookTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BibliotecaAppTest.showMessageWhenInputIsInvalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookTest.checkIfBookIsMarkedAvailableWhenCreated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -139,8 +142,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="showMessageWhenInputIsInvalid" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BookTest" />
+      <option name="METHOD_NAME" value="checkIfBookIsMarkedAvailableWhenCreated" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,18 +152,18 @@
     <list>
       <item itemvalue="Application.BibliotecaApp" />
       <item itemvalue="JUnit.BibliotecaAppTest" />
-      <item itemvalue="JUnit.BibliotecaAppTest.showMessageWhenInputIsInvalid" />
       <item itemvalue="JUnit.BibliotecaAppTest.displayBookListWhenUserEntersOne" />
-      <item itemvalue="JUnit.BibliotecaAppTest.displayInitialWelcomeMessage" />
       <item itemvalue="JUnit.BibliotecaAppTest.closeAppWhenUserEntersQuit" />
+      <item itemvalue="JUnit.BookTest.checkIfBookIsMarkedAvailableWhenCreated" />
+      <item itemvalue="JUnit.BookTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BibliotecaAppTest" />
+        <item itemvalue="JUnit.BookTest" />
+        <item itemvalue="JUnit.BookTest.checkIfBookIsMarkedAvailableWhenCreated" />
         <item itemvalue="JUnit.BibliotecaAppTest.closeAppWhenUserEntersQuit" />
         <item itemvalue="JUnit.BibliotecaAppTest.displayBookListWhenUserEntersOne" />
-        <item itemvalue="JUnit.BibliotecaAppTest.showMessageWhenInputIsInvalid" />
-        <item itemvalue="JUnit.BibliotecaAppTest.displayInitialWelcomeMessage" />
       </list>
     </recent_temporary>
   </component>
@@ -192,10 +195,10 @@
     </state>
     <state x="360" y="222" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587127674786" />
     <state x="360" y="240" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1587068251730" />
-    <state x="100" y="79" width="1592" height="940" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587134828505">
+    <state x="100" y="79" width="1592" height="940" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1587225796393">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="100" y="79" width="1592" height="940" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587134828505" />
+    <state x="100" y="79" width="1592" height="940" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587225796393" />
     <state x="100" y="79" width="1592" height="940" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1587133194755" />
     <state x="709" y="279" key="#com.intellij.ide.util.MemberChooser" timestamp="1587067614910">
       <screen x="0" y="23" width="1792" height="1097" />
@@ -213,45 +216,45 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="662" y="426" width="467" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1792.1120@0.0.1792.1120" timestamp="1587028424644" />
-    <state width="1750" height="287" key="GridCell.Tab.0.bottom" timestamp="1587138358153">
+    <state width="1750" height="287" key="GridCell.Tab.0.bottom" timestamp="1587225801337">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587138358153" />
+    <state width="1750" height="287" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587225801337" />
     <state width="1732" height="287" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323416" />
-    <state width="1750" height="287" key="GridCell.Tab.0.center" timestamp="1587138358152">
+    <state width="1750" height="287" key="GridCell.Tab.0.center" timestamp="1587225801336">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587138358152" />
+    <state width="1750" height="287" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587225801336" />
     <state width="1732" height="287" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323416" />
-    <state width="1750" height="287" key="GridCell.Tab.0.left" timestamp="1587138358152">
+    <state width="1750" height="287" key="GridCell.Tab.0.left" timestamp="1587225801335">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587138358152" />
+    <state width="1750" height="287" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587225801335" />
     <state width="1732" height="287" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323415" />
-    <state width="1750" height="287" key="GridCell.Tab.0.right" timestamp="1587138358153">
+    <state width="1750" height="287" key="GridCell.Tab.0.right" timestamp="1587225801337">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587138358153" />
+    <state width="1750" height="287" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587225801337" />
     <state width="1732" height="287" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323416" />
-    <state width="1750" height="390" key="GridCell.Tab.1.bottom" timestamp="1587134784651">
+    <state width="1750" height="389" key="GridCell.Tab.1.bottom" timestamp="1587225250850">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="390" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587134784651" />
+    <state width="1750" height="389" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587225250850" />
     <state width="1732" height="371" key="GridCell.Tab.1.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1587068063962" />
-    <state width="1750" height="390" key="GridCell.Tab.1.center" timestamp="1587134784650">
+    <state width="1750" height="389" key="GridCell.Tab.1.center" timestamp="1587225250849">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="390" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587134784650" />
+    <state width="1750" height="389" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587225250849" />
     <state width="1732" height="371" key="GridCell.Tab.1.center/0.23.1792.1097@0.23.1792.1097" timestamp="1587068063962" />
-    <state width="1750" height="390" key="GridCell.Tab.1.left" timestamp="1587134784649">
+    <state width="1750" height="389" key="GridCell.Tab.1.left" timestamp="1587225250849">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="390" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587134784649" />
+    <state width="1750" height="389" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587225250849" />
     <state width="1732" height="371" key="GridCell.Tab.1.left/0.23.1792.1097@0.23.1792.1097" timestamp="1587068063962" />
-    <state width="1750" height="390" key="GridCell.Tab.1.right" timestamp="1587134784650">
+    <state width="1750" height="389" key="GridCell.Tab.1.right" timestamp="1587225250850">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="390" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587134784650" />
+    <state width="1750" height="389" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587225250850" />
     <state width="1732" height="371" key="GridCell.Tab.1.right/0.23.1792.1097@0.23.1792.1097" timestamp="1587068063962" />
     <state x="397" y="191" key="SettingsEditor" timestamp="1587127578593">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -262,6 +265,10 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="550" y="406" key="com.intellij.ide.util.TipDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1586941942689" />
+    <state x="600" y="461" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1587225341743">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="600" y="461" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1792.1120@0.0.1792.1120" timestamp="1587225341743" />
     <state x="674" y="294" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587107518651">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -270,12 +277,16 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="561" y="265" key="run.anything.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1587028523462" />
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup" timestamp="1587224861031">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1587224861031" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/biblioteca$MenuTest.ic" NAME="MenuTest Coverage Results" MODIFIED="1587123761068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/biblioteca$BibliotecaApp.ic" NAME="BibliotecaApp Coverage Results" MODIFIED="1587136857401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/biblioteca$BibliotecaApp.ic" NAME="BibliotecaApp Coverage Results" MODIFIED="1587225350171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/biblioteca$BibliotecaAppTest_displayInitialWelcomeMessage.ic" NAME="BibliotecaAppTest.displayInitialWelcomeMessage Coverage Results" MODIFIED="1587133101956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -299,10 +310,13 @@
     <SUITE FILE_PATH="coverage/biblioteca$BibliotecaAppTest_createListOfBooksWithGivenInformation.ic" NAME="BibliotecaAppTest.createListOfBooksWithGivenInformation Coverage Results" MODIFIED="1587065520664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/biblioteca$BookTest_checkIfBookIsMarkedAvailableWhenCreated.ic" NAME="BookTest.checkIfBookIsMarkedAvailableWhenCreated Coverage Results" MODIFIED="1587210484939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.twu.biblioteca.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/biblioteca$BibliotecaAppTest_printListOfBooksWhenAppStarts.ic" NAME="BibliotecaAppTest.printListOfBooksWhenAppStarts Coverage Results" MODIFIED="1587067165051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/biblioteca$BibliotecaAppTest.ic" NAME="BibliotecaAppTest Coverage Results" MODIFIED="1587138358118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/biblioteca$BibliotecaAppTest.ic" NAME="BibliotecaAppTest Coverage Results" MODIFIED="1587225801311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/biblioteca$BookTest_testBookAuthor.ic" NAME="BookTest.testBookAuthor Coverage Results" MODIFIED="1587031883667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -320,10 +334,10 @@
     <SUITE FILE_PATH="coverage/biblioteca$BibliotecaAppTest_displayBookListWhenUserEntersOne.ic" NAME="BibliotecaAppTest.displayBookListWhenUserEntersOne Coverage Results" MODIFIED="1587134924079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/biblioteca$BookTest.ic" NAME="BookTest Coverage Results" MODIFIED="1587068013060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/biblioteca$MenuTest_collectCorrectInputFromTheUser.ic" NAME="MenuTest.collectCorrectInputFromTheUser Coverage Results" MODIFIED="1587122407161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/biblioteca$MenuTest_collectCorrectInputFromTheUser.ic" NAME="MenuTest.collectCorrectInputFromTheUser Coverage Results" MODIFIED="1587122407161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/biblioteca$BookTest.ic" NAME="BookTest Coverage Results" MODIFIED="1587225694244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
   </component>

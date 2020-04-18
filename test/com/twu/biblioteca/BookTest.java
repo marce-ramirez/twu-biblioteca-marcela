@@ -10,13 +10,17 @@ public class BookTest {
 
     @Before
     public void setUpBook () {
-        testBook = new Book("The Golden Compass", "Philip Pullman", 1995);
+        testBook = new Book("The Golden Compass", "Philip Pullman", 1995, "0285");
     }
 
     @Test
-    public void testBookInformation () {
+    public void testBookInformationAfterCreation () {
         assertEquals("The Golden Compass", testBook.getTitle());
         assertEquals("Philip Pullman", testBook.getAuthor());
         assertEquals(1995, testBook.getPublicationYear());
+        assertEquals("0285", testBook.getBookId());
+        assertEquals(true, testBook.isBookAvailable());
     }
+
+
 }
