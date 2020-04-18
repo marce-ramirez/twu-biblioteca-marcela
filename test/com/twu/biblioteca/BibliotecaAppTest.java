@@ -21,6 +21,7 @@ public class BibliotecaAppTest {
             "\nHarry Potter | J.K. Rowling | 1997 | ID: 0204\n";
     private static final String invalidOptionMessage = "\nPlease select a valid option\n";
     private static final String testBookId = "0892";
+    private static final String invalidBookId = "0000";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -44,16 +45,21 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void requestBookIdWhenUserEntersCheckoutOption() {
+    public void successfulBookCheckoutOnValidId() {
         Book bookToTest = BibliotecaApp.findBookById(testBookId);
         assert bookToTest != null;
         assertTrue(bookToTest.isBookAvailable());
         System.setIn(new ByteArrayInputStream(testBookId.getBytes()));
-        outContent.reset();
         BibliotecaApp.processUserInput("2");
-        BibliotecaApp.checkoutBook();
         assertFalse(bookToTest.isBookAvailable());
         assertEquals("\nThank you! Enjoy the book\n", BibliotecaApp.getOutputMessage());
+    }
+
+    @Test
+    public void bookCheckoutFailure() {
+        System.setIn(new ByteArrayInputStream(invalidBookId.getBytes()));
+        BibliotecaApp.processUserInput("2");
+        assertEquals("\nSorry, that book is not available\n", BibliotecaApp.getOutputMessage());
     }
 
     @Test

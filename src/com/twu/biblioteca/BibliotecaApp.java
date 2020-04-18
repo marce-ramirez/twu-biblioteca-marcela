@@ -113,11 +113,13 @@ public class BibliotecaApp {
             System.out.println("IOException: " + e);
         }
         Book foundBook = findBookById(bookId);
-        if (foundBook != null) {
+        if (foundBook != null && foundBook.isBookAvailable()) {
             foundBook.setBookNotAvailable();
             setOutputMessage("\nThank you! Enjoy the book\n");
-            System.out.print(outputMessage);
+        } else {
+            setOutputMessage("\nSorry, that book is not available\n");
         }
+        System.out.print(outputMessage);
     }
 
 }
