@@ -1,8 +1,5 @@
 package com.twu.biblioteca;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Menu {
@@ -27,17 +24,9 @@ public class Menu {
     }
 
     public String getUserInput() {
-        String userInput = null;
         printAppMenu();
         System.out.print("\nEnter an option: ");
-        try {
-            BufferedReader is = new BufferedReader(new InputStreamReader(System.in));
-            userInput = is.readLine();
-            if (userInput.length() == 0 )  return null;
-        } catch (IOException e) {
-            System.out.println("IOException: " + e);
-        }
-        return userInput.toLowerCase();
+        return  BibliotecaApp.collectInputFromUser().toLowerCase();
     }
 }
 

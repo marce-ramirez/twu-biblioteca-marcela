@@ -42,6 +42,17 @@ public class BibliotecaApp {
         appIsRunning = false;
     }
 
+    public static String collectInputFromUser() {
+        String userInput = "";
+        try {
+            BufferedReader is = new BufferedReader(new InputStreamReader(System.in));
+            userInput = is.readLine();
+        } catch (IOException e) {
+            System.out.println("IOException: " + e);
+        }
+        return userInput;
+    }
+
     public static void displayWelcomeMessage () {
         setOutputMessage("\nWelcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n");
         System.out.print(outputMessage);
@@ -109,12 +120,7 @@ public class BibliotecaApp {
 
     public static void checkoutBook() {
         System.out.print("Please enter the book ID: ");
-        try {
-            BufferedReader is = new BufferedReader(new InputStreamReader(System.in));
-            bookId = is.readLine();
-        } catch (IOException e) {
-            System.out.println("IOException: " + e);
-        }
+        bookId = collectInputFromUser();
         Book foundBook = findBookById(bookId);
         if (foundBook != null && foundBook.isBookAvailable()) {
             foundBook.setBookNotAvailable();
@@ -127,12 +133,7 @@ public class BibliotecaApp {
 
     public static void returnBook() {
         System.out.print("Please enter the book ID: ");
-        try {
-            BufferedReader is = new BufferedReader(new InputStreamReader(System.in));
-            bookId = is.readLine();
-        } catch (IOException e) {
-            System.out.println("IOException: " + e);
-        }
+        bookId = collectInputFromUser();
         Book foundBook = findBookById(bookId);
         if (foundBook != null && !foundBook.isBookAvailable()) {
             foundBook.setBookAvailable();

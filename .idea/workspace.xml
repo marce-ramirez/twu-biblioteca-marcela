@@ -102,22 +102,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BibliotecaAppTest.closeAppWhenUserEntersQuit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaAppTest" />
-      <option name="METHOD_NAME" value="closeAppWhenUserEntersQuit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BibliotecaAppTest.showMessageWhenInputIsInvalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
@@ -150,21 +134,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MenuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.BibliotecaApp" />
       <item itemvalue="JUnit.BibliotecaAppTest.successfulBookReturnOnValidId" />
-      <item itemvalue="JUnit.BibliotecaAppTest.closeAppWhenUserEntersQuit" />
       <item itemvalue="JUnit.BibliotecaAppTest.showMessageWhenInputIsInvalid" />
       <item itemvalue="JUnit.BibliotecaAppTest" />
       <item itemvalue="JUnit.BibliotecaAppTest.bookReturnFailure" />
+      <item itemvalue="JUnit.MenuTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MenuTest" />
+        <item itemvalue="JUnit.BibliotecaAppTest" />
         <item itemvalue="JUnit.BibliotecaAppTest.bookReturnFailure" />
         <item itemvalue="JUnit.BibliotecaAppTest.successfulBookReturnOnValidId" />
-        <item itemvalue="JUnit.BibliotecaAppTest" />
         <item itemvalue="JUnit.BibliotecaAppTest.showMessageWhenInputIsInvalid" />
-        <item itemvalue="JUnit.BibliotecaAppTest.closeAppWhenUserEntersQuit" />
       </list>
     </recent_temporary>
   </component>
@@ -222,25 +221,25 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="1239" y="442" key="#xdebugger.evaluate/0.0.1792.1120@0.0.1792.1120" timestamp="1587245201518" />
-    <state width="1750" height="287" key="GridCell.Tab.0.bottom" timestamp="1587249062671">
+    <state width="1750" height="287" key="GridCell.Tab.0.bottom" timestamp="1587249885159">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587249062671" />
+    <state width="1750" height="287" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587249885159" />
     <state width="1732" height="287" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323416" />
-    <state width="1750" height="287" key="GridCell.Tab.0.center" timestamp="1587249062669">
+    <state width="1750" height="287" key="GridCell.Tab.0.center" timestamp="1587249885158">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587249062669" />
+    <state width="1750" height="287" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587249885158" />
     <state width="1732" height="287" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323416" />
-    <state width="1750" height="287" key="GridCell.Tab.0.left" timestamp="1587249062669">
+    <state width="1750" height="287" key="GridCell.Tab.0.left" timestamp="1587249885158">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587249062669" />
+    <state width="1750" height="287" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587249885158" />
     <state width="1732" height="287" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323415" />
-    <state width="1750" height="287" key="GridCell.Tab.0.right" timestamp="1587249062670">
+    <state width="1750" height="287" key="GridCell.Tab.0.right" timestamp="1587249885158">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587249062670" />
+    <state width="1750" height="287" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587249885158" />
     <state width="1732" height="287" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323416" />
     <state width="1750" height="389" key="GridCell.Tab.1.bottom" timestamp="1587247571452">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -289,7 +288,7 @@
     <state x="561" y="251" width="670" height="676" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1587243020154" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/biblioteca$MenuTest.ic" NAME="MenuTest Coverage Results" MODIFIED="1587238314167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/biblioteca$MenuTest.ic" NAME="MenuTest Coverage Results" MODIFIED="1587249875685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/biblioteca$com_twu_biblioteca_in_biblioteca.ic" NAME="com.twu.biblioteca in biblioteca Coverage Results" MODIFIED="1587068063933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -307,7 +306,7 @@
     <SUITE FILE_PATH="coverage/biblioteca$BookTest_checkIfBookIsMarkedAvailableWhenCreated.ic" NAME="BookTest.checkIfBookIsMarkedAvailableWhenCreated Coverage Results" MODIFIED="1587210484939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/biblioteca$BibliotecaAppTest.ic" NAME="BibliotecaAppTest Coverage Results" MODIFIED="1587248557675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/biblioteca$BibliotecaAppTest.ic" NAME="BibliotecaAppTest Coverage Results" MODIFIED="1587249754820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/biblioteca$BookTest_testBookInformation.ic" NAME="BookTest.testBookInformation Coverage Results" MODIFIED="1587064471735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -328,7 +327,7 @@
     <SUITE FILE_PATH="coverage/biblioteca$BibliotecaAppTest_bookReturnFailure.ic" NAME="BibliotecaAppTest.bookReturnFailure Coverage Results" MODIFIED="1587249052728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/biblioteca$BibliotecaApp.ic" NAME="BibliotecaApp Coverage Results" MODIFIED="1587249062632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/biblioteca$BibliotecaApp.ic" NAME="BibliotecaApp Coverage Results" MODIFIED="1587249885122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/biblioteca$BibliotecaAppTest_displayInitialWelcomeMessage.ic" NAME="BibliotecaAppTest.displayInitialWelcomeMessage Coverage Results" MODIFIED="1587248040241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
