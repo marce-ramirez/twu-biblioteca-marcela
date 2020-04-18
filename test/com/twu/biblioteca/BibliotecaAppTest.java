@@ -75,6 +75,13 @@ public class BibliotecaAppTest {
     }
 
     @Test
+    public void bookReturnFailure() {
+        System.setIn(new ByteArrayInputStream(invalidBookId.getBytes()));
+        BibliotecaApp.processUserInput("3");
+        assertEquals("\nThat is not a valid book to return\n", BibliotecaApp.getOutputMessage());
+    }
+
+    @Test
     public void closeAppWhenUserEntersQuit() {
         BibliotecaApp.processUserInput("4");
         assertFalse(BibliotecaApp.isAppRunning());

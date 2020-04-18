@@ -137,6 +137,8 @@ public class BibliotecaApp {
         if (foundBook != null && !foundBook.isBookAvailable()) {
             foundBook.setBookAvailable();
             setOutputMessage("\nThank you for returning the book\n");
+        } else {
+            setOutputMessage("\nThat is not a valid book to return\n");
         }
         System.out.print(outputMessage);
     }
