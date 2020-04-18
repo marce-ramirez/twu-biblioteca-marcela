@@ -93,7 +93,7 @@ public class BibliotecaApp {
         return null;
     }
 
-    private static void checkoutBook() {
+    public static void checkoutBook() {
         String bookId = null;
         System.out.print("Please enter the book ID: ");
         try {
@@ -105,6 +105,7 @@ public class BibliotecaApp {
         Book foundBook = findBookById(bookId);
         if (foundBook != null) {
             foundBook.setBookNotAvailable();
+            System.out.print("\nThank you! Enjoy the book\n");
         }
     }
 

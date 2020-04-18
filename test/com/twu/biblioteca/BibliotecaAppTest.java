@@ -23,11 +23,11 @@ public class BibliotecaAppTest {
     private static final String testBookId = "0892";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    ByteArrayInputStream enteredBookId = new ByteArrayInputStream(testBookId.getBytes());
 
     @Before
     public void setUpStream() {
         System.setOut(new PrintStream(outContent));
+        BibliotecaApp.createBookList();
     }
 
     @Test
@@ -39,20 +39,18 @@ public class BibliotecaAppTest {
 
     @Test
     public void displayBookListWhenUserEntersListOption() {
-        BibliotecaApp.createBookList();
         BibliotecaApp.processUserInput("1");
         assertEquals(booksList, outContent.toString());
     }
 
     @Test
     public void requestBookIdWhenUserEntersCheckoutOption() {
-        BibliotecaApp.createBookList();
         Book bookToTest = BibliotecaApp.findBookById(testBookId);
         assert bookToTest != null;
         assertTrue(bookToTest.isBookAvailable());
-        System.setIn(enteredBookId);
+        System.setIn(new ByteArrayInputStream(testBookId.getBytes()));
         BibliotecaApp.processUserInput("2");
-        bookToTest.setBookNotAvailable();
+        BibliotecaApp.checkoutBook();
         assertFalse(bookToTest.isBookAvailable());
     }
 
