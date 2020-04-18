@@ -35,4 +35,8 @@ public class Book {
     public void setBookNotAvailable() {
         isAvailable = false;
     }
+
+    public void setBookAvailable() {
+        isAvailable = true;
+    }
 }

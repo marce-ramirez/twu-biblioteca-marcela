@@ -63,8 +63,19 @@ public class BibliotecaAppTest {
     }
 
     @Test
-    public void closeAppWhenUserEntersQuit() {
+    public void successfulBookReturnOnValidId() {
+        Book bookToTest = BibliotecaApp.findBookById(testBookId);
+        System.setIn(new ByteArrayInputStream(testBookId.getBytes()));
+        BibliotecaApp.processUserInput("2");
+        System.setIn(new ByteArrayInputStream(testBookId.getBytes()));
         BibliotecaApp.processUserInput("3");
+        assert bookToTest != null;
+        assertTrue(bookToTest.isBookAvailable());
+    }
+
+    @Test
+    public void closeAppWhenUserEntersQuit() {
+        BibliotecaApp.processUserInput("4");
         assertFalse(BibliotecaApp.isAppRunning());
     }
 

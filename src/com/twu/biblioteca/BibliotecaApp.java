@@ -10,6 +10,7 @@ public class BibliotecaApp {
     public static ArrayList<Book> allBooks = new ArrayList<>();
     private static boolean appIsRunning = true;
     private static String outputMessage = "";
+    private static String bookId;
 
     public static void main(String[] args) {
         displayWelcomeMessage();
@@ -55,6 +56,9 @@ public class BibliotecaApp {
                 checkoutBook();
                 break;
             case "3":
+                returnBook();
+                break;
+            case "4":
                 System.out.print("\nGood bye!\n\n");
                 setAppNotRunning();
                 break;
@@ -104,7 +108,6 @@ public class BibliotecaApp {
     }
 
     public static void checkoutBook() {
-        String bookId = null;
         System.out.print("Please enter the book ID: ");
         try {
             BufferedReader is = new BufferedReader(new InputStreamReader(System.in));
@@ -120,6 +123,20 @@ public class BibliotecaApp {
             setOutputMessage("\nSorry, that book is not available\n");
         }
         System.out.print(outputMessage);
+    }
+
+    public static void returnBook() {
+        System.out.print("Please enter the book ID: ");
+        try {
+            BufferedReader is = new BufferedReader(new InputStreamReader(System.in));
+            bookId = is.readLine();
+        } catch (IOException e) {
+            System.out.println("IOException: " + e);
+        }
+        Book foundBook = findBookById(bookId);
+        if (foundBook != null && !foundBook.isBookAvailable()) {
+            foundBook.setBookAvailable();
+        }
     }
 
 }

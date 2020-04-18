@@ -15,7 +15,8 @@ public class Menu {
     public void addMenuItems() {
         menu.add("1 - List of books");
         menu.add("2 - Checkout a book");
-        menu.add("3 - Quit");
+        menu.add("3 - Return a bok");
+        menu.add("4 - Quit");
     }
 
     public void printAppMenu() {
