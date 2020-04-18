@@ -1,12 +1,14 @@
 package com.twu.biblioteca;
 
+
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class BibliotecaAppTest {
 
@@ -16,11 +18,12 @@ public class BibliotecaAppTest {
             "\nNeverwhere | Neil Gaiman | 1996 | ID: 0935" +
             "\nEarthsea Cycle | Ursula K. Le Guin | 1968 | ID: 2448" +
             "\nThe Name of the Wind | Patrick Rothfuss | 2007 | ID: 3001" +
-            "\nHarry Potter | J.K. Rowling | 1997 | ID: 0204\n\n";
-
-    private static final String invalidOptionMessage = "\nPlease select a valid option\n\n";
+            "\nHarry Potter | J.K. Rowling | 1997 | ID: 0204\n";
+    private static final String invalidOptionMessage = "\nPlease select a valid option\n";
+    private static final String testBookId = "0892";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    ByteArrayInputStream enteredBookId = new ByteArrayInputStream(testBookId.getBytes());
 
     @Before
     public void setUpStream() {
@@ -30,21 +33,33 @@ public class BibliotecaAppTest {
     @Test
     public void displayInitialWelcomeMessage() {
         BibliotecaApp.displayWelcomeMessage();
-        String welcomeMessage = "\nWelcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n\n";
+        String welcomeMessage = "\nWelcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n";
         assertEquals(welcomeMessage, outContent.toString());
     }
 
     @Test
-    public void displayBookListWhenUserEntersOne() {
+    public void displayBookListWhenUserEntersListOption() {
         BibliotecaApp.createBookList();
         BibliotecaApp.processUserInput("1");
         assertEquals(booksList, outContent.toString());
     }
 
     @Test
-    public void closeAppWhenUserEntersQuit() {
+    public void requestBookIdWhenUserEntersCheckoutOption() {
+        BibliotecaApp.createBookList();
+        Book bookToTest = BibliotecaApp.findBookById(testBookId);
+        assert bookToTest != null;
+        assertTrue(bookToTest.isBookAvailable());
+        System.setIn(enteredBookId);
         BibliotecaApp.processUserInput("2");
-        assertEquals(false, BibliotecaApp.isAppRunning());
+        bookToTest.setBookNotAvailable();
+        assertFalse(bookToTest.isBookAvailable());
+    }
+
+    @Test
+    public void closeAppWhenUserEntersQuit() {
+        BibliotecaApp.processUserInput("3");
+        assertFalse(BibliotecaApp.isAppRunning());
     }
 
     @Test

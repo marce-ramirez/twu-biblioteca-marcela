@@ -19,8 +19,7 @@ public class BookTest {
         assertEquals("Philip Pullman", testBook.getAuthor());
         assertEquals(1995, testBook.getPublicationYear());
         assertEquals("0285", testBook.getBookId());
-        assertEquals(true, testBook.isBookAvailable());
+        assertTrue(testBook.isBookAvailable());
     }
-
 
 }

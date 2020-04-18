@@ -21,7 +21,8 @@ public class MenuTest {
 
     @Test
     public void showCorrectMenuItems() {
-        assertEquals("1 - List of Books", testMenu.menu.get(0));
+        assertEquals("1 - List of books", testMenu.menu.get(0));
+        assertEquals("2 - Checkout a book", testMenu.menu.get(1));
     }
 
     @Test

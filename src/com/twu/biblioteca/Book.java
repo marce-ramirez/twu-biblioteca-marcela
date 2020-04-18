@@ -32,10 +32,6 @@ public class Book {
         return isAvailable;
     }
 
-    public void setBookAvailable() {
-        isAvailable = true;
-    }
-
     public void setBookNotAvailable() {
         isAvailable = false;
     }

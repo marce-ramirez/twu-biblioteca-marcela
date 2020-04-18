@@ -6,28 +6,29 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Menu {
-    ArrayList<String> menu = new ArrayList<String>();
+    ArrayList<String> menu = new ArrayList<>();
 
     public void generateAppMenu() {
         addMenuItems();
-        printAppMenu();
     }
 
     public void addMenuItems() {
-        menu.add("1 - List of Books");
-        menu.add("2 - Quit");
+        menu.add("1 - List of books");
+        menu.add("2 - Checkout a book");
+        menu.add("3 - Quit");
     }
 
     public void printAppMenu() {
+        System.out.print("\n");
         for (String menuItem : menu) {
             System.out.println(menuItem);
         }
-        System.out.print("\n");
     }
 
     public String getUserInput() {
         String userInput = null;
-        System.out.print("Enter an option: ");
+        printAppMenu();
+        System.out.print("\nEnter an option: ");
         try {
             BufferedReader is = new BufferedReader(new InputStreamReader(System.in));
             userInput = is.readLine();
