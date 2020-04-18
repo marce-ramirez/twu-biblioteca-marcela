@@ -71,6 +71,7 @@ public class BibliotecaAppTest {
         BibliotecaApp.processUserInput("3");
         assert bookToTest != null;
         assertTrue(bookToTest.isBookAvailable());
+        assertEquals("\nThank you for returning the book\n", BibliotecaApp.getOutputMessage());
     }
 
     @Test

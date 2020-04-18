@@ -136,7 +136,9 @@ public class BibliotecaApp {
         Book foundBook = findBookById(bookId);
         if (foundBook != null && !foundBook.isBookAvailable()) {
             foundBook.setBookAvailable();
+            setOutputMessage("\nThank you for returning the book\n");
         }
+        System.out.print(outputMessage);
     }
 
 }
