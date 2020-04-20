@@ -17,16 +17,16 @@ public class MovieList {
         for (Movie movie : allMovies) {
             if (movie.isMovieAvailable()) {
                 movieList
-                    .append("\n")
-                    .append(movie.getTitle())
-                    .append(" | ")
-                    .append(movie.getDirector())
-                    .append(" | ")
-                    .append(movie.getYear())
-                    .append(" | Rating: ")
-                    .append(movie.getRating())
-                    .append(" | ID: ")
-                    .append(movie.getMovieId());
+                        .append("\n")
+                        .append(movie.getTitle())
+                        .append(" | ")
+                        .append(movie.getDirector())
+                        .append(" | ")
+                        .append(movie.getYear())
+                        .append(" | Rating: ")
+                        .append(movie.getRating())
+                        .append(" | ID: ")
+                        .append(movie.getMovieId());
             }
 
         }
@@ -50,6 +50,17 @@ public class MovieList {
             BibliotecaApp.setOutputMessage("\nThank you! Enjoy the movie\n");
         } else {
             BibliotecaApp.setOutputMessage("\nSorry, that movie is not available\n");
+        }
+        System.out.print(BibliotecaApp.getOutputMessage());
+    }
+
+    public void returnMovie(String movieId) {
+        Movie foundMovie = findMovieById(movieId);
+        if (foundMovie != null && !foundMovie.isMovieAvailable()) {
+            foundMovie.setMovieAvailable();
+            BibliotecaApp.setOutputMessage("\nThank you for returning the movie\n");
+        } else {
+            BibliotecaApp.setOutputMessage("\nThat is not a valid movie to return\n");
         }
         System.out.print(BibliotecaApp.getOutputMessage());
     }

@@ -40,10 +40,27 @@ public class MovieListTest {
         assertEquals("\nThank you! Enjoy the movie\n", BibliotecaApp.getOutputMessage());
     }
 
-//    @Test
-//    public void movieCheckoutFailure() {
-//        String invalidMovieId = "0000";
-//        movieList.checkoutMovie(invalidMovieId);
-//        assertEquals("\nSorry, that movie is not available\n", BibliotecaApp.getOutputMessage());
-//    }
+    @Test
+    public void movieCheckoutFailure() {
+        String invalidMovieId = "0000";
+        movieList.checkoutMovie(invalidMovieId);
+        assertEquals("\nSorry, that movie is not available\n", BibliotecaApp.getOutputMessage());
+    }
+
+
+    @Test
+    public void successfulMovieReturnOnValidId() {
+        Movie movieToTest = movieList.findMovieById(testMovieId);
+        movieList.checkoutMovie(testMovieId);
+        movieList.returnMovie(testMovieId);
+        assert movieToTest != null;
+        assertTrue(movieToTest.isMovieAvailable());
+        assertEquals("\nThank you for returning the movie\n", BibliotecaApp.getOutputMessage());
+    }
+
+    @Test
+    public void movieReturnFailure() {
+        movieList.returnMovie(testMovieId);
+        assertEquals("\nThat is not a valid movie to return\n", BibliotecaApp.getOutputMessage());
+    }
 }

@@ -83,6 +83,11 @@ public class BibliotecaApp {
                 movieList.checkoutMovie(enteredId);
                 break;
             case "6":
+                System.out.print("Please enter the movie ID: ");
+                enteredId = collectInputFromUser();
+                movieList.returnMovie(enteredId);
+                break;
+            case "7":
                 System.out.print("\nGood bye!\n");
                 setAppNotRunning();
                 break;

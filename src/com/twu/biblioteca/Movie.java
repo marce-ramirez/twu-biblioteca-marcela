@@ -43,4 +43,8 @@ public class Movie {
     public void setMovieNotAvailable() {
         isAvailable = false;
     }
+
+    public void setMovieAvailable() {
+        isAvailable = true;
+    }
 }
