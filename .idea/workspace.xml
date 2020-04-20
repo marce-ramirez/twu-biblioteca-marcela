@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="262e8535-62a5-42fe-8c78-97f5d4d40078" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/UserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/MovieList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/MovieList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/MovieListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/MovieListTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/MovieList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/MovieList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MovieListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MovieListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +62,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.com.twu.biblioteca in biblioteca">
+  <component name="RunManager" selected="JUnit.UserTest.testUserPassword">
     <configuration name="BibliotecaApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.BibliotecaApp" />
       <module name="biblioteca" />
@@ -100,21 +91,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="biblioteca" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.twu.biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MenuTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MovieListTest.movieCheckoutFailure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
@@ -131,7 +107,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovieTest.testBookInformationAfterCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="biblioteca" />
       <extension name="coverage">
         <pattern>
@@ -140,8 +116,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
-      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.MovieTest" />
-      <option name="METHOD_NAME" value="testBookInformationAfterCreation" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.testUserPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="biblioteca" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.UserTest" />
+      <option name="METHOD_NAME" value="testUserPassword" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,18 +155,18 @@
     <list>
       <item itemvalue="Application.BibliotecaApp" />
       <item itemvalue="JUnit.com.twu.biblioteca in biblioteca" />
-      <item itemvalue="JUnit.MovieTest.testBookInformationAfterCreation" />
-      <item itemvalue="JUnit.MenuTest" />
       <item itemvalue="JUnit.BibliotecaAppTest" />
       <item itemvalue="JUnit.MovieListTest.movieCheckoutFailure" />
+      <item itemvalue="JUnit.UserTest" />
+      <item itemvalue="JUnit.UserTest.testUserPassword" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserTest.testUserPassword" />
+        <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.com.twu.biblioteca in biblioteca" />
         <item itemvalue="JUnit.MovieListTest.movieCheckoutFailure" />
         <item itemvalue="JUnit.BibliotecaAppTest" />
-        <item itemvalue="JUnit.MenuTest" />
-        <item itemvalue="JUnit.MovieTest.testBookInformationAfterCreation" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +183,7 @@
       <workItem from="1586941914194" duration="10000" />
       <workItem from="1586941941937" duration="197000" />
       <workItem from="1587364733920" duration="741000" />
-      <workItem from="1587367048727" duration="10503000" />
+      <workItem from="1587367048727" duration="12600000" />
     </task>
     <servers />
   </component>
@@ -214,10 +205,10 @@
     </state>
     <state x="100" y="79" width="1592" height="940" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587376168742" />
     <state x="100" y="79" width="1592" height="940" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1587374986443" />
-    <state x="709" y="261" key="#com.intellij.ide.util.MemberChooser" timestamp="1587375848991">
+    <state x="709" y="261" key="#com.intellij.ide.util.MemberChooser" timestamp="1587389153052">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="709" y="261" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1587375848991" />
+    <state x="709" y="261" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120@0.0.1792.1120" timestamp="1587389153052" />
     <state x="709" y="279" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1097@0.23.1792.1097" timestamp="1587067614910" />
     <state x="633" y="369" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587068244406">
       <screen x="0" y="23" width="1792" height="1097" />
@@ -235,25 +226,25 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="1239" y="442" key="#xdebugger.evaluate/0.0.1792.1120@0.0.1792.1120" timestamp="1587245201518" />
-    <state width="1750" height="287" key="GridCell.Tab.0.bottom" timestamp="1587385675342">
+    <state width="1750" height="287" key="GridCell.Tab.0.bottom" timestamp="1587389195072">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587385675342" />
+    <state width="1750" height="287" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587389195072" />
     <state width="1732" height="287" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323416" />
-    <state width="1750" height="287" key="GridCell.Tab.0.center" timestamp="1587385675341">
+    <state width="1750" height="287" key="GridCell.Tab.0.center" timestamp="1587389195071">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587385675341" />
+    <state width="1750" height="287" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587389195071" />
     <state width="1732" height="287" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323416" />
-    <state width="1750" height="287" key="GridCell.Tab.0.left" timestamp="1587385675341">
+    <state width="1750" height="287" key="GridCell.Tab.0.left" timestamp="1587389195071">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587385675341" />
+    <state width="1750" height="287" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587389195071" />
     <state width="1732" height="287" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323415" />
-    <state width="1750" height="287" key="GridCell.Tab.0.right" timestamp="1587385675341">
+    <state width="1750" height="287" key="GridCell.Tab.0.right" timestamp="1587389195072">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="287" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587385675341" />
+    <state width="1750" height="287" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587389195072" />
     <state width="1732" height="287" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1587068323416" />
     <state width="1750" height="389" key="GridCell.Tab.1.bottom" timestamp="1587375960512">
       <screen x="0" y="0" width="1792" height="1120" />
@@ -288,10 +279,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="600" y="461" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1792.1120@0.0.1792.1120" timestamp="1587225341743" />
-    <state x="674" y="294" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587377235071">
+    <state x="674" y="294" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587387720223">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="674" y="294" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587377235071" />
+    <state x="674" y="294" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587387720223" />
     <state x="593" y="317" width="606" height="486" key="find.popup" timestamp="1587385480113">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
