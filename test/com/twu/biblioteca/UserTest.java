@@ -6,12 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class UserTest {
-    private User testUser;
-
-    @Before
-    public void setUpUser () {
-        testUser = new User(5510684, "palitopollito");
-    }
+    private final User testUser = new User();
 
     @Test
     public void testUserCreation () {

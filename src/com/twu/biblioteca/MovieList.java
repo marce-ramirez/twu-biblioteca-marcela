@@ -17,16 +17,16 @@ public class MovieList {
         for (Movie movie : allMovies) {
             if (movie.isMovieAvailable()) {
                 movieList
-                        .append("\n")
-                        .append(movie.getTitle())
-                        .append(" | ")
-                        .append(movie.getDirector())
-                        .append(" | ")
-                        .append(movie.getYear())
-                        .append(" | Rating: ")
-                        .append(movie.getRating())
-                        .append(" | ID: ")
-                        .append(movie.getMovieId());
+                    .append("\n")
+                    .append(movie.getTitle())
+                    .append(" | ")
+                    .append(movie.getDirector())
+                    .append(" | ")
+                    .append(movie.getYear())
+                    .append(" | Rating: ")
+                    .append(movie.getRating())
+                    .append(" | ID: ")
+                    .append(movie.getMovieId());
             }
 
         }

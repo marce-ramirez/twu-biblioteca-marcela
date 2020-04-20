@@ -8,6 +8,7 @@ public class BibliotecaApp {
     private static final Menu menu = new Menu();
     private static final BookList bookList = new BookList();
     private static final MovieList movieList = new MovieList();
+    private static final UserList userList =  new UserList();
     private static boolean appIsRunning = true;
     private static String outputMessage = "";
 
@@ -15,6 +16,7 @@ public class BibliotecaApp {
         displayWelcomeMessage();
         bookList.createBookList();
         movieList.createMovieList();
+        userList.addUser();
         menu.generateAppMenu();
         while (isAppRunning()) {
             String userInput = menu.getUserInput();
