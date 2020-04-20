@@ -26,7 +26,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void closeAppWhenUserEntersQuit() {
-        BibliotecaApp.processUserInput("5");
+        BibliotecaApp.processUserInput("6");
         assertFalse(BibliotecaApp.isAppRunning());
     }
 

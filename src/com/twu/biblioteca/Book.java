@@ -26,7 +26,9 @@ public class Book {
         return publicationYear;
     }
 
-    public String getBookId() { return bookId; }
+    public String getBookId() {
+        return bookId;
+    }
 
     public boolean isBookAvailable() {
         return isAvailable;

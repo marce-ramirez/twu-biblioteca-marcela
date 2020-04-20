@@ -6,7 +6,7 @@ public class Movie {
     private final String director;
     private final double rating;
     private final String movieId;
-    private final boolean isAvailable = true;
+    private boolean isAvailable = true;
 
     public Movie(String title, String director, int year, double rating, String movieId) {
         this.title = title;
@@ -38,5 +38,9 @@ public class Movie {
 
     public boolean isMovieAvailable() {
         return isAvailable;
+    }
+
+    public void setMovieNotAvailable() {
+        isAvailable = false;
     }
 }

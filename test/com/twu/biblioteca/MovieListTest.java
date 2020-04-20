@@ -29,4 +29,21 @@ public class MovieListTest {
         movieList.displayMovieList();
         assertEquals(movieListString, outContent.toString());
     }
+
+    @Test
+    public void successfulMovieCheckoutOnValidId() {
+        Movie movieToTest = movieList.findMovieById(testMovieId);
+        assert movieToTest != null;
+        assertTrue(movieToTest.isMovieAvailable());
+        movieList.checkoutMovie(testMovieId);
+        assertFalse(movieToTest.isMovieAvailable());
+        assertEquals("\nThank you! Enjoy the movie\n", BibliotecaApp.getOutputMessage());
+    }
+
+//    @Test
+//    public void movieCheckoutFailure() {
+//        String invalidMovieId = "0000";
+//        movieList.checkoutMovie(invalidMovieId);
+//        assertEquals("\nSorry, that movie is not available\n", BibliotecaApp.getOutputMessage());
+//    }
 }

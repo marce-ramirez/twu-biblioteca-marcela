@@ -59,25 +59,30 @@ public class BibliotecaApp {
     }
 
     public static void processUserInput(String userInput) {
-        String bookId;
+        String enteredId;
         switch (userInput) {
             case "1":
                 bookList.displayBookList();
                 break;
             case "2":
                 System.out.print("Please enter the book ID: ");
-                bookId = collectInputFromUser();
-                bookList.checkoutBook(bookId);
+                enteredId = collectInputFromUser();
+                bookList.checkoutBook(enteredId);
                 break;
             case "3":
                 System.out.print("Please enter the book ID: ");
-                bookId = collectInputFromUser();
-                bookList.returnBook(bookId);
+                enteredId = collectInputFromUser();
+                bookList.returnBook(enteredId);
                 break;
             case "4":
                 movieList.displayMovieList();
                 break;
             case "5":
+                System.out.print("Please enter the movie ID: ");
+                enteredId = collectInputFromUser();
+                movieList.checkoutMovie(enteredId);
+                break;
+            case "6":
                 System.out.print("\nGood bye!\n");
                 setAppNotRunning();
                 break;
