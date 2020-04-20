@@ -8,7 +8,8 @@ public class BibliotecaApp {
     private static final Menu menu = new Menu();
     private static final BookList bookList = new BookList();
     private static final MovieList movieList = new MovieList();
-    private static final UserList userList =  new UserList();
+    private static final UserList userList = new UserList();
+    private static String currentUser;
     private static boolean appIsRunning = true;
     private static String outputMessage = "";
 
@@ -17,7 +18,7 @@ public class BibliotecaApp {
         bookList.createBookList();
         movieList.createMovieList();
         userList.addUser();
-        menu.generateAppMenu();
+        menu.generateLoggedOutMenu();
         while (isAppRunning()) {
             String userInput = menu.getUserInput();
             if (userInput == null) {
@@ -60,42 +61,70 @@ public class BibliotecaApp {
         System.out.print(outputMessage);
     }
 
+    public static void userLogin() {
+        System.out.print("Enter library number: ");
+        String libraryNumber = collectInputFromUser();
+        System.out.print("Enter password: ");
+        String enteredPassword = collectInputFromUser();
+        User foundUser = userList.findUser(libraryNumber);
+        if (foundUser.validatePassword(enteredPassword)) {
+            currentUser = foundUser.getLibraryNumber();
+            System.out.println("\nHello, " + currentUser);
+        }
+        menu.generateLoggedInMenu();
+    }
+
     public static void processUserInput(String userInput) {
         String enteredId;
-        switch (userInput) {
-            case "1":
-                bookList.displayBookList();
-                break;
-            case "2":
-                System.out.print("Please enter the book ID: ");
-                enteredId = collectInputFromUser();
-                bookList.checkoutBook(enteredId);
-                break;
-            case "3":
-                System.out.print("Please enter the book ID: ");
-                enteredId = collectInputFromUser();
-                bookList.returnBook(enteredId);
-                break;
-            case "4":
-                movieList.displayMovieList();
-                break;
-            case "5":
-                System.out.print("Please enter the movie ID: ");
-                enteredId = collectInputFromUser();
-                movieList.checkoutMovie(enteredId);
-                break;
-            case "6":
-                System.out.print("Please enter the movie ID: ");
-                enteredId = collectInputFromUser();
-                movieList.returnMovie(enteredId);
-                break;
-            case "7":
-                System.out.print("\nGood bye!\n");
-                setAppNotRunning();
-                break;
-            default:
-                System.out.print("\nPlease select a valid option\n");
-                break;
+        if (currentUser == null) {
+            switch (userInput) {
+                case "1":
+                    userLogin();
+                    break;
+                case "2":
+                    System.out.print("\nGood bye!\n");
+                    setAppNotRunning();
+                    break;
+                default:
+                    System.out.print("\nPlease select a valid option\n");
+                    break;
+            }
+        } else {
+            switch (userInput) {
+                case "1":
+                    bookList.displayBookList();
+                    break;
+                case "2":
+                    System.out.print("Please enter the book ID: ");
+                    enteredId = collectInputFromUser();
+                    bookList.checkoutBook(enteredId);
+                    break;
+                case "3":
+                    System.out.print("Please enter the book ID: ");
+                    enteredId = collectInputFromUser();
+                    bookList.returnBook(enteredId);
+                    break;
+                case "4":
+                    movieList.displayMovieList();
+                    break;
+                case "5":
+                    System.out.print("Please enter the movie ID: ");
+                    enteredId = collectInputFromUser();
+                    movieList.checkoutMovie(enteredId);
+                    break;
+                case "6":
+                    System.out.print("Please enter the movie ID: ");
+                    enteredId = collectInputFromUser();
+                    movieList.returnMovie(enteredId);
+                    break;
+                case "7":
+                    System.out.print("\nGood bye!\n");
+                    setAppNotRunning();
+                    break;
+                default:
+                    System.out.print("\nPlease select a valid option\n");
+                    break;
+            }
         }
     }
 

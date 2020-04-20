@@ -3,8 +3,6 @@ package com.twu.biblioteca;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
-
 import static org.junit.Assert.*;
 
 public class UserListTest {
@@ -15,12 +13,17 @@ public class UserListTest {
     public void setUpList() {
         userList = new UserList();
         userList.addUser();
+        userToTest = userList.getUserList().get(0);
     }
 
     @Test
     public void userAddedToUserList() {
-        userToTest = userList.getUserList().get(0);
-        assertEquals(5510684, userToTest.getLibraryNumber());
+        assertEquals("551-0684", userToTest.getLibraryNumber());
     }
 
+    @Test
+    public void findUserByLibraryNumber(){
+        User foundUser = userList.findUser("551-0684");
+        assertEquals(userToTest.getLibraryNumber(), foundUser.getLibraryNumber());
+    }
 }

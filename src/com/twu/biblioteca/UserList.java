@@ -13,4 +13,13 @@ public class UserList {
     public ArrayList<User> getUserList() {
         return userList;
     }
+
+    public User findUser(String libraryNumber) {
+        for (User user : userList) {
+            if (user.getLibraryNumber().equals(libraryNumber)) {
+                return user;
+            }
+        }
+        return null;
+    }
 }

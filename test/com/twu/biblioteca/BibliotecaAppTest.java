@@ -3,6 +3,7 @@ package com.twu.biblioteca;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
@@ -14,6 +15,8 @@ public class BibliotecaAppTest {
 
     @Before
     public void setUpStream() {
+        User testUser = new User();
+        testUser = new User();
         System.setOut(new PrintStream(outContent));
     }
 
@@ -26,7 +29,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void closeAppWhenUserEntersQuit() {
-        BibliotecaApp.processUserInput("7");
+        BibliotecaApp.processUserInput("2");
         assertFalse(BibliotecaApp.isAppRunning());
     }
 
@@ -36,4 +39,5 @@ public class BibliotecaAppTest {
         BibliotecaApp.processUserInput(invalidOption);
         assertEquals(invalidOptionMessage, outContent.toString());
     }
+
 }

@@ -16,13 +16,21 @@ public class MenuTest {
     @Before
     public void createMenu() {
         testMenu = new Menu();
-        testMenu.generateAppMenu();
     }
 
     @Test
-    public void showCorrectMenuItems() {
+    public void showCorrectMenuWhenNoUser() {
+        testMenu.generateLoggedOutMenu();
+        assertEquals("1 - Login", testMenu.menu.get(0));
+        assertEquals("2 - Quit", testMenu.menu.get(1));
+    }
+
+    @Test
+    public void showCorrectMenuWhenLoggedUser() {
+        testMenu.generateLoggedInMenu();
         assertEquals("1 - List of books", testMenu.menu.get(0));
         assertEquals("2 - Checkout a book", testMenu.menu.get(1));
+        assertEquals("7 - Quit", testMenu.menu.get(6));
     }
 
     @Test
