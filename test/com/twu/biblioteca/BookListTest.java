@@ -10,16 +10,14 @@ import static org.junit.Assert.*;
 
 public class BookListTest {
     private BookList bookList;
-
-    public static final String booksList = "\nHis Dark Materials | Philip Pullman | 1995 | ID: 0892" +
+    public final String bookListString = "\nHis Dark Materials | Philip Pullman | 1995 | ID: 0892" +
             "\nGood Omens | Neil Gaiman and Terry Pratchett | 1990 | ID: 0791" +
             "\nThe Hobbit | J.R.R. Tolkien | 1937 | ID: 1603" +
             "\nNeverwhere | Neil Gaiman | 1996 | ID: 0935" +
             "\nEarthsea Cycle | Ursula K. Le Guin | 1968 | ID: 2448" +
             "\nThe Name of the Wind | Patrick Rothfuss | 2007 | ID: 3001" +
             "\nHarry Potter | J.K. Rowling | 1997 | ID: 0204\n";
-    private static final String testBookId = "0892";
-    private static final String invalidBookId = "0000";
+    private final String testBookId = "0892";
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
@@ -33,7 +31,7 @@ public class BookListTest {
     @Test
     public void displayBookListWhenUserEntersListOption() {
         bookList.displayBookList();
-        assertEquals(booksList, outContent.toString());
+        assertEquals(bookListString, outContent.toString());
     }
 
     @Test
@@ -48,6 +46,7 @@ public class BookListTest {
 
     @Test
     public void bookCheckoutFailure() {
+        String invalidBookId = "0000";
         bookList.checkoutBook(invalidBookId);
         assertEquals("\nSorry, that book is not available\n", BibliotecaApp.getOutputMessage());
     }

@@ -14,7 +14,7 @@ public class BibliotecaApp {
         displayWelcomeMessage();
         bookList.createBookList();
         menu.generateAppMenu();
-        while(isAppRunning()) {
+        while (isAppRunning()) {
             String userInput = menu.getUserInput();
             if (userInput == null) {
                 processUserInput("");
@@ -28,7 +28,7 @@ public class BibliotecaApp {
         return outputMessage;
     }
 
-    public static void setOutputMessage (String message) {
+    public static void setOutputMessage(String message) {
         outputMessage = message;
     }
 
@@ -51,14 +51,14 @@ public class BibliotecaApp {
         return userInput;
     }
 
-    public static void displayWelcomeMessage () {
+    public static void displayWelcomeMessage() {
         setOutputMessage("\nWelcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!\n");
         System.out.print(outputMessage);
     }
 
     public static void processUserInput(String userInput) {
         String bookId;
-                switch (userInput) {
+        switch (userInput) {
             case "1":
                 bookList.displayBookList();
                 break;
@@ -79,7 +79,7 @@ public class BibliotecaApp {
             default:
                 System.out.print("\nPlease select a valid option\n");
                 break;
-       }
+        }
     }
 
 }

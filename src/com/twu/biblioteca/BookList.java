@@ -21,14 +21,14 @@ public class BookList {
         for (Book book : allBooks) {
             if (book.isBookAvailable()) {
                 bookList
-                    .append("\n")
-                    .append(book.getTitle())
-                    .append(" | ")
-                    .append(book.getAuthor())
-                    .append(" | ")
-                    .append(book.getPublicationYear())
-                    .append(" | ID: ")
-                    .append(book.getBookId());
+                        .append("\n")
+                        .append(book.getTitle())
+                        .append(" | ")
+                        .append(book.getAuthor())
+                        .append(" | ")
+                        .append(book.getPublicationYear())
+                        .append(" | ID: ")
+                        .append(book.getBookId());
             }
         }
         bookList.append("\n");
@@ -36,8 +36,8 @@ public class BookList {
     }
 
     public Book findBookById(String id) {
-        for(Book book : allBooks) {
-            if(book.getBookId().equals(id)) {
+        for (Book book : allBooks) {
+            if (book.getBookId().equals(id)) {
                 return book;
             }
         }

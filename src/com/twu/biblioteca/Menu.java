@@ -12,7 +12,7 @@ public class Menu {
     public void addMenuItems() {
         menu.add("1 - List of books");
         menu.add("2 - Checkout a book");
-        menu.add("3 - Return a bok");
+        menu.add("3 - Return a book");
         menu.add("4 - Quit");
     }
 
@@ -26,7 +26,7 @@ public class Menu {
     public String getUserInput() {
         printAppMenu();
         System.out.print("\nEnter an option: ");
-        return  BibliotecaApp.collectInputFromUser().toLowerCase();
+        return BibliotecaApp.collectInputFromUser().toLowerCase();
     }
 }
 

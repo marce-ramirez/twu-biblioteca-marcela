@@ -21,5 +21,4 @@ public class BookTest {
         assertEquals("0285", testBook.getBookId());
         assertTrue(testBook.isBookAvailable());
     }
-
 }
