@@ -7,12 +7,14 @@ import java.io.InputStreamReader;
 public class BibliotecaApp {
     private static final Menu menu = new Menu();
     private static final BookList bookList = new BookList();
+    private static final MovieList movieList = new MovieList();
     private static boolean appIsRunning = true;
     private static String outputMessage = "";
 
     public static void main(String[] args) {
         displayWelcomeMessage();
         bookList.createBookList();
+        movieList.createMovieList();
         menu.generateAppMenu();
         while (isAppRunning()) {
             String userInput = menu.getUserInput();
@@ -73,6 +75,9 @@ public class BibliotecaApp {
                 bookList.returnBook(bookId);
                 break;
             case "4":
+                movieList.displayMovieList();
+                break;
+            case "5":
                 System.out.print("\nGood bye!\n");
                 setAppNotRunning();
                 break;

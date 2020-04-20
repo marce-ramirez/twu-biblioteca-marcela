@@ -10,7 +10,7 @@ public class MovieTest {
 
     @Before
     public void setUpBook () {
-        testMovie = new Movie("Big Fish", 2004, "Tim Burton", 8.0, "3472");
+        testMovie = new Movie("Big Fish", "Tim Burton", 2004, 8.0, "3472");
     }
 
     @Test

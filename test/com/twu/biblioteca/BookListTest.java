@@ -18,7 +18,6 @@ public class BookListTest {
             "\nThe Name of the Wind | Patrick Rothfuss | 2007 | ID: 3001" +
             "\nHarry Potter | J.K. Rowling | 1997 | ID: 0204\n";
     private final String testBookId = "0892";
-
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before

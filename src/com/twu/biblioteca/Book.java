@@ -1,10 +1,10 @@
 package com.twu.biblioteca;
 
 public class Book {
-    private String title;
-    private String author;
-    private int publicationYear;
-    private String bookId;
+    private final String title;
+    private final String author;
+    private final int publicationYear;
+    private final String bookId;
     private boolean isAvailable = true;
 
     public Book(String title, String author, int publicationYear, String bookId) {
