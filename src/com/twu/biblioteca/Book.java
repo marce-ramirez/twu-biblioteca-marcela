@@ -43,11 +43,13 @@ public class Book {
         isAvailable = true;
     }
 
-//    public String getCurrentHolder() {
-//        return currentHolder;
-//    }
+    public void setCurrentHolder(String userNumber) {
+        this.currentHolder = userNumber;
+    }
 
-//    public void setCurrentHolder(String userNumber) {
-//        this.currentHolder = userNumber;
-//    }
+    public String getCurrentHolder() {
+        return currentHolder;
+    }
+
+
 }

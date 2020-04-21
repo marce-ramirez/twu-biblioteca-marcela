@@ -17,7 +17,6 @@ public class BibliotecaAppTest {
     @Before
     public void setUpStream() {
         System.setOut(new PrintStream(outContent));
-        BibliotecaApp.initialAppSetup();
     }
 
     @Test
@@ -42,6 +41,7 @@ public class BibliotecaAppTest {
 
     @Test
     public void validateUserLibraryNumber() {
+        BibliotecaApp.initialAppSetup();
         ByteArrayInputStream userNumber = new ByteArrayInputStream("551-0684".getBytes());
         System.setIn(userNumber);
         User testUser = BibliotecaApp.validateUser();

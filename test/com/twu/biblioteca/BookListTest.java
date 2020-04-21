@@ -18,6 +18,7 @@ public class BookListTest {
             "\nThe Name of the Wind | Patrick Rothfuss | 2007 | ID: 3001" +
             "\nHarry Potter | J.K. Rowling | 1997 | ID: 0204\n";
     private final String testBookId = "0892";
+    private final String testUserNumber = "551-0684";
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
@@ -35,25 +36,36 @@ public class BookListTest {
 
     @Test
     public void successfulBookCheckoutOnValidId() {
+        User testUser = new User();
+        BibliotecaApp.userLogin(testUser, true);
         Book bookToTest = bookList.findBookById(testBookId);
         assert bookToTest != null;
         assertTrue(bookToTest.isBookAvailable());
-        bookList.checkoutBook(testBookId);
+        bookList.checkoutBook(testBookId, testUserNumber);
         assertFalse(bookToTest.isBookAvailable());
+        assertEquals(testUserNumber, bookToTest.getCurrentHolder());
         assertEquals("\nThank you! Enjoy the book\n", BibliotecaApp.getOutputMessage());
     }
 
     @Test
     public void bookCheckoutFailure() {
         String invalidBookId = "0000";
-        bookList.checkoutBook(invalidBookId);
+        bookList.checkoutBook(invalidBookId, testUserNumber);
         assertEquals("\nSorry, that book is not available\n", BibliotecaApp.getOutputMessage());
+    }
+
+    @Test
+    public void notificationBorrowedBook() {
+        String invalidBookId = "2448";
+        bookList.checkoutBook(invalidBookId, "720-4899");
+        bookList.checkoutBook(invalidBookId, testUserNumber);
+        assertEquals("\nThe user 720-4899 has this book\n", BibliotecaApp.getOutputMessage());
     }
 
     @Test
     public void successfulBookReturnOnValidId() {
         Book bookToTest = bookList.findBookById(testBookId);
-        bookList.checkoutBook(testBookId);
+        bookList.checkoutBook(testBookId, testUserNumber);
         bookList.returnBook(testBookId);
         assert bookToTest != null;
         assertTrue(bookToTest.isBookAvailable());

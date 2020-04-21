@@ -28,6 +28,7 @@ public class BibliotecaApp {
 
     public static void initialAppSetup() {
         bookList.createBookList();
+        bookList.checkoutBook("2448", "720-4899");
         movieList.createMovieList();
         userList.addUser();
         menu.generateLoggedOutMenu();
@@ -91,6 +92,10 @@ public class BibliotecaApp {
         }
     }
 
+    public static String getCurrentUser() {
+        return currentUser;
+    }
+
     public static void processUserInput(String userInput) {
         String enteredId;
         if (currentUser == null) {
@@ -116,7 +121,7 @@ public class BibliotecaApp {
                 case "2":
                     System.out.print("Please enter the book ID: ");
                     enteredId = collectInputFromUser();
-                    bookList.checkoutBook(enteredId);
+                    bookList.checkoutBook(enteredId, getCurrentUser());
                     break;
                 case "3":
                     System.out.print("Please enter the book ID: ");

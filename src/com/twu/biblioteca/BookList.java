@@ -21,14 +21,14 @@ public class BookList {
         for (Book book : allBooks) {
             if (book.isBookAvailable()) {
                 bookList
-                        .append("\n")
-                        .append(book.getTitle())
-                        .append(" | ")
-                        .append(book.getAuthor())
-                        .append(" | ")
-                        .append(book.getPublicationYear())
-                        .append(" | ID: ")
-                        .append(book.getBookId());
+                    .append("\n")
+                    .append(book.getTitle())
+                    .append(" | ")
+                    .append(book.getAuthor())
+                    .append(" | ")
+                    .append(book.getPublicationYear())
+                    .append(" | ID: ")
+                    .append(book.getBookId());
             }
         }
         bookList.append("\n");
@@ -44,11 +44,16 @@ public class BookList {
         return null;
     }
 
-    public void checkoutBook(String bookId) {
+    public void checkoutBook(String bookId, String userNumber) {
         Book foundBook = findBookById(bookId);
-        if (foundBook != null && foundBook.isBookAvailable()) {
-            foundBook.setBookNotAvailable();
-            BibliotecaApp.setOutputMessage("\nThank you! Enjoy the book\n");
+        if (foundBook != null) {
+            if (foundBook.isBookAvailable()) {
+                foundBook.setBookNotAvailable();
+                foundBook.setCurrentHolder(userNumber);
+                BibliotecaApp.setOutputMessage("\nThank you! Enjoy the book\n");
+            } else {
+                BibliotecaApp.setOutputMessage("\nThe user " + foundBook.getCurrentHolder() + " has this book\n");
+            }
         } else {
             BibliotecaApp.setOutputMessage("\nSorry, that book is not available\n");
         }

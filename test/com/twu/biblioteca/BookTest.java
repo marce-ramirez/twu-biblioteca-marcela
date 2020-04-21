@@ -7,10 +7,12 @@ import static org.junit.Assert.*;
 
 public class BookTest {
     private Book testBook;
+    private Book borrowedBook;
 
     @Before
     public void setUpBook () {
         testBook = new Book("The Golden Compass", "Philip Pullman", 1995, "0285");
+        borrowedBook = new Book("Earthsea Cycle", "Ursula K. Le Guin", 1968, "2448");
     }
 
     @Test
@@ -22,5 +24,9 @@ public class BookTest {
         assertTrue(testBook.isBookAvailable());
     }
 
-
+    @Test
+    public void seeUserThatBorrowedBook () {
+        borrowedBook.setCurrentHolder("720-4899");
+        assertEquals("720-4899", borrowedBook.getCurrentHolder());
+    }
 }
