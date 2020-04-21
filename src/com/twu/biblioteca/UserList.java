@@ -7,7 +7,7 @@ public class UserList {
 
     public void addUser() {
         userList.clear();
-        userList.add(new User());
+        userList.add(new User("551-0684", "Randolph Carter", "rcarter@miskatonic.edu", 6204456));
     }
 
     public ArrayList<User> getUserList() {

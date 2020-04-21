@@ -36,7 +36,7 @@ public class BookListTest {
 
     @Test
     public void successfulBookCheckoutOnValidId() {
-        User testUser = new User();
+        User testUser = new User("551-0684", "Randolph Carter", "rcarter@miskatonic.edu", 6204456);
         BibliotecaApp.userLogin(testUser, true);
         Book bookToTest = bookList.findBookById(testBookId);
         assert bookToTest != null;

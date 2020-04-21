@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 public class BibliotecaAppTest {
     private static final String invalidOptionMessage = "\nPlease select a valid option\n";
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    User testUser = new User();
+    User testUser = new User("551-0684", "Randolph Carter", "rcarter@miskatonic.edu", 6204456);
 
     @Before
     public void setUpStream() {
