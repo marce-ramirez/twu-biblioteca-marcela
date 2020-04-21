@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 public class BookListTest {
     private BookList bookList;
-    public final String bookListString = "\nHis Dark Materials | Philip Pullman | 1995 | ID: 0892" +
+    private final String bookListString = "\nHis Dark Materials | Philip Pullman | 1995 | ID: 0892" +
             "\nGood Omens | Neil Gaiman and Terry Pratchett | 1990 | ID: 0791" +
             "\nThe Hobbit | J.R.R. Tolkien | 1937 | ID: 1603" +
             "\nNeverwhere | Neil Gaiman | 1996 | ID: 0935" +

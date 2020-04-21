@@ -19,7 +19,8 @@ public class Menu {
         menu.add("4 - List of movies");
         menu.add("5 - Checkout a movie");
         menu.add("6 - Return a movie");
-        menu.add("7 - Quit");
+        menu.add("7 - My profile");
+        menu.add("8 - Quit");
     }
 
     public void printAppMenu() {

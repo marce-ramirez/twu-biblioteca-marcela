@@ -28,7 +28,6 @@ public class MovieList {
                     .append(" | ID: ")
                     .append(movie.getMovieId());
             }
-
         }
         movieList.append("\n");
         System.out.print(movieList);

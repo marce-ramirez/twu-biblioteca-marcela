@@ -30,7 +30,7 @@ public class MenuTest {
         testMenu.generateLoggedInMenu();
         assertEquals("1 - List of books", testMenu.menu.get(0));
         assertEquals("2 - Checkout a book", testMenu.menu.get(1));
-        assertEquals("7 - Quit", testMenu.menu.get(6));
+        assertEquals("8 - Quit", testMenu.menu.get(7));
     }
 
     @Test

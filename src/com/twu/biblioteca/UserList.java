@@ -22,4 +22,9 @@ public class UserList {
         }
         return null;
     }
+
+    public void displayUserInformation(String libraryNumber) {
+        User foundUser = findUser(libraryNumber);
+        System.out.print("\nName: " + foundUser.getName() + "\nEmail: " + foundUser.getEmail() + "\nPhone: " + foundUser.getPhoneNumber() + "\n");
+    }
 }

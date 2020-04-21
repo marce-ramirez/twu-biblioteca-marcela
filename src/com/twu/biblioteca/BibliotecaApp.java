@@ -97,7 +97,6 @@ public class BibliotecaApp {
     }
 
     public static void processUserInput(String userInput) {
-        String enteredId;
         if (currentUser == null) {
             switch (userInput) {
                 case "1":
@@ -114,6 +113,7 @@ public class BibliotecaApp {
                     break;
             }
         } else {
+            String enteredId;
             switch (userInput) {
                 case "1":
                     bookList.displayBookList();
@@ -142,6 +142,9 @@ public class BibliotecaApp {
                     movieList.returnMovie(enteredId);
                     break;
                 case "7":
+                    userList.displayUserInformation(currentUser);
+                    break;
+                case "8":
                     System.out.print("\nGood bye!\n");
                     setAppNotRunning();
                     break;
