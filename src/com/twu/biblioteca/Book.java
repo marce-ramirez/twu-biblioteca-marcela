@@ -6,6 +6,7 @@ public class Book {
     private final int publicationYear;
     private final String bookId;
     private boolean isAvailable = true;
+    private String currentHolder;
 
     public Book(String title, String author, int publicationYear, String bookId) {
         this.title = title;
@@ -41,4 +42,12 @@ public class Book {
     public void setBookAvailable() {
         isAvailable = true;
     }
+
+//    public String getCurrentHolder() {
+//        return currentHolder;
+//    }
+
+//    public void setCurrentHolder(String userNumber) {
+//        this.currentHolder = userNumber;
+//    }
 }

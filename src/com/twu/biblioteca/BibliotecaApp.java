@@ -15,10 +15,7 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         displayWelcomeMessage();
-        bookList.createBookList();
-        movieList.createMovieList();
-        userList.addUser();
-        menu.generateLoggedOutMenu();
+        initialAppSetup();
         while (isAppRunning()) {
             String userInput = menu.getUserInput();
             if (userInput == null) {
@@ -27,6 +24,13 @@ public class BibliotecaApp {
                 processUserInput(userInput);
             }
         }
+    }
+
+    public static void initialAppSetup() {
+        bookList.createBookList();
+        movieList.createMovieList();
+        userList.addUser();
+        menu.generateLoggedOutMenu();
     }
 
     public static String getOutputMessage() {
@@ -61,17 +65,30 @@ public class BibliotecaApp {
         System.out.print(outputMessage);
     }
 
-    public static void userLogin() {
+    public static User validateUser() {
         System.out.print("Enter library number: ");
         String libraryNumber = collectInputFromUser();
+        return userList.findUser(libraryNumber);
+    }
+
+    public static boolean validatePassword(User user) {
         System.out.print("Enter password: ");
         String enteredPassword = collectInputFromUser();
-        User foundUser = userList.findUser(libraryNumber);
-        if (foundUser.validatePassword(enteredPassword)) {
-            currentUser = foundUser.getLibraryNumber();
-            System.out.println("\nHello, " + currentUser);
+        return user.validatePassword(enteredPassword);
+    }
+
+    public static void userLogin(User validUser, boolean isValidPassword) {
+        if (validUser != null) {
+            if (isValidPassword) {
+                currentUser = validUser.getLibraryNumber();
+                System.out.println("\nHello " + currentUser);
+                menu.generateLoggedInMenu();
+            } else {
+                System.out.println("\nWrong password");
+            }
+        } else {
+            System.out.print("\nThis user doesn't exist. Please try again\n");
         }
-        menu.generateLoggedInMenu();
     }
 
     public static void processUserInput(String userInput) {
@@ -79,7 +96,9 @@ public class BibliotecaApp {
         if (currentUser == null) {
             switch (userInput) {
                 case "1":
-                    userLogin();
+                    User validUser = validateUser();
+                    boolean isValidPassword = validatePassword(validUser);
+                    userLogin(validUser, isValidPassword);
                     break;
                 case "2":
                     System.out.print("\nGood bye!\n");
